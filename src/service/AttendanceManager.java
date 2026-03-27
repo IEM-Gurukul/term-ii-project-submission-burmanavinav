@@ -28,4 +28,26 @@ public class AttendanceManager {
 
         return total == 0 ? 0 : (present * 100.0) / total;
     }
+
+    public void updateStudent(int id, String newName, String newCourse) {
+        for (int i = 0; i < students.size(); i++) {
+            if (students.get(i).getId() == id) {
+                students.set(i, new Student(id, newName, newCourse));
+                break;
+            }
+        }
+    }      
+
+    public void displayStudentsDetailed() {
+        for (Student s : students) {
+            double percent = calculateAttendance(s.getId());
+
+            System.out.println("-------------------------");
+            System.out.println("ID: " + s.getId());
+            System.out.println("Name: " + s.getName());
+            System.out.println("Course: " + s.getCourse());
+            System.out.println("Attendance: " + percent + "%");
+        }
+    }
+
 }

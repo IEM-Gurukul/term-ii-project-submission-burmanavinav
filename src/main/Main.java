@@ -20,5 +20,13 @@ public class Main {
         double percentage = manager.calculateAttendance(1);
 
         System.out.println("Attendance %: " + percentage);
+        System.out.println("\nDetailed Student Info:");
+        manager.displayStudentsDetailed();
+
+        manager.updateStudent(1, "Avinav Updated", "CSE AI");
+
+        System.out.println("\nAfter Update:");
+        manager.displayStudentsDetailed();
+    
     }
 }
