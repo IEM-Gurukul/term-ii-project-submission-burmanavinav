@@ -18,7 +18,8 @@ public class Main {
             System.out.println("3. View Attendance %");
             System.out.println("4. Display Students");
             System.out.println("5. Update Student");
-            System.out.println("6. Exit");
+            System.out.println("6. Export Attendance Report");
+            System.out.println("7. Exit");
 
             System.out.print("Enter choice: ");
             int choice = sc.nextInt();
@@ -105,6 +106,12 @@ public class Main {
                     break;
 
                 case 6:
+                    System.out.print("Enter filename for report: ");
+                    String filename = sc.nextLine();
+                    manager.exportAttendanceReport(filename);
+                    break;
+
+                case 7:
                     System.out.println("Exiting...");
                     sc.close();
                     return;

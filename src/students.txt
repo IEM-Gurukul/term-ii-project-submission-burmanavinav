@@ -1,0 +1,4 @@
+12,Avinav,CSE
+1,John ,IT
+100,Test Student,Test Course
+65,Aadarsh,CSE(IOT)
